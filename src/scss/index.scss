@@ -1,0 +1,671 @@
+@import url("https://use.typekit.net/wyf5ryh.css");
+@import "reset";
+$dark-blue: #000035;
+$background-blue: #F2F8FC;
+$font: 'effra', sans-serif;
+
+/* Algemeen */
+body {
+   overflow-x: hidden;
+   position: relative;
+   max-width: 1400px;
+   margin: 0 auto;
+   background-color: $background-blue;
+}
+
+main {
+   min-height: 100px;
+}
+/* Einde Algemeen */
+
+/* Navigatie */
+.navigation {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: $dark-blue;
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   z-index: 20;
+
+   a {
+      text-decoration: none;
+   }
+
+   & > i {
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+      transition: all .3s;
+      padding: 15px 20px;
+
+      &:hover {
+         transform: scale(1.1);
+      }
+   }
+}
+
+.navbar {
+   width: 100%;
+   max-width: 800px;
+   height: 100vh;
+   background-color: #ffffff;
+   position: fixed;
+   left: -800px;
+   z-index: 110;
+   transition: all .5s ease-out;
+   padding: 20px;
+   top: 0;
+   overflow: scroll;
+
+   &>h2 {
+      font-size: 20px;
+      color: $dark-blue;
+      margin-top: 30px;
+      font-weight: 700;
+   }
+
+   img {
+      width: 60px;
+   }
+
+   a {
+      width: 100%;
+      display: flex;
+      text-decoration: none;
+      margin: 20px 0;
+      transition: all .6s;
+
+      &:hover {
+         transform: scale(1.07) translateX(10px);
+      }
+
+      i {
+         width: 40px;
+         height: 40px;
+         border-radius: 200px;
+         border: .5px solid #f2f2f2;
+         color: #252525;
+         font-size: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-right: 15px;
+      }
+
+      div {
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         flex-direction: column;
+
+         h2 {
+
+            font-weight: 700;
+            color: #252525;
+            font-size: 16px;
+         }
+
+         h3 {
+            font-weight: 400;
+            font-size: 12px;
+            color: #858585;
+            margin-bottom: 5px;
+         }
+      }
+   }
+}
+
+.navbar.active {
+   left: 0;
+}
+
+.navbar_top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-top: none;
+   border-bottom: .5px solid #f2f2f2;
+   padding-bottom: 30px;
+
+   i {
+      cursor: pointer;
+      font-size: 30px;
+      padding: 15px 20px;
+      margin-right: -20px;
+   }
+}
+
+.navbar .settings {
+   padding-top: 30px;
+   display: inline-block;
+   width: 100%;
+   margin-top: 10px;
+   border-top: 1px solid #f2f2f2;
+
+   a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+      text-decoration: none;
+      color: $dark-blue;
+      margin-bottom: 15px;
+
+      i {
+         width: 25px;
+         height: 25px;
+         transition: all .3s;
+         border-radius: 200px;
+         border: 2px solid $dark-blue;
+         color: $dark-blue;
+         font-size: 16px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-right: 15px;
+      }
+
+      &:hover i {
+         background-color: $dark-blue;
+         color: white;
+      }
+
+   }
+}
+
+/* Einde Navigatie */
+
+/* Resorts */
+
+.page_holder {
+   background-color: $background-blue;
+}
+
+.resorts_holder {
+   padding: 20px 10px;
+   padding-bottom: 60px;
+
+   h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: $dark-blue;
+   }
+
+   h2 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 15px;
+      display: inline-block;
+   }
+
+   article {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      cursor: pointer;
+      justify-content: space-between;
+      align-items: center;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(210, 210, 210, 0.05);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(210, 210, 210, 0.05);
+      box-shadow: 0px 0px 5px 0px rgba(210, 210, 210, 0.05);
+
+      h3 {
+         font-size: 14px;
+         color: #616368;
+      }
+
+      i {
+         font-size: 30px;
+         color: #d7d7d7;
+      }
+   }
+}
+
+.resorts_holder article.active i {
+   color: #2ecc71;
+}
+
+
+
+.resorts_sort {
+   width: 100%;
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin-bottom: 20px;
+
+   i {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      color: #616368;
+      border-radius: 4px 0 0 4px;
+      transform: translateY(-50%);
+   }
+
+   input {
+      font-size: 16px;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      font-family: $font;
+      font-weight: 200;
+      padding: 10px;
+      border: #F1F1F1 2px solid;
+      width: 100%;
+   }
+
+}
+
+.gotoNext {
+   position: fixed;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 10px;
+   padding: 15px 30px;
+   width: 100%;
+   max-width: 800px;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 16px;
+   font-weight: 200;
+   border-radius: 40px;
+   background-color: $dark-blue;
+   color: white;
+}
+
+/* Einde Resorts */
+
+
+/* Wait Times */
+
+.titleholder {
+   width: 100%;
+   margin-top: -53px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+   z-index: 1;
+   background-image: url(../assets/images/ttbg.png);
+   background-size: contain;
+   background-position: top;
+   background-repeat: no-repeat;
+   padding: 15px 10px;
+
+   h2 {
+      font-size: 11px;
+      color: #9f9f9f;
+      margin-top: 0;
+      margin-bottom: 5px;
+   }
+}
+
+.waittimes_holder,
+.openingtimes {
+   padding: 20px 10px;
+   padding-bottom: 80px;
+   padding-top: 10px;
+   min-height: 70vh;
+}
+
+.waittimes_holder h1,
+.openingtimes h1 {
+   font-size: 20px;
+   font-weight: 700;
+   color: $dark-blue;
+}
+
+.waittimes_holder>div>h2 {
+   font-size: 14px;
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin-top: 20px;
+   display: inline-block;
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.waittimes_holder .attractions,
+.waittimes_holder .shows,
+.waittimes_holder .restaurants {
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+}
+
+.waittimes_holder article {
+   margin: 5px .5%;
+   display: flex;
+   cursor: pointer;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   -webkit-box-shadow: 0px 0px 5px 0px rgba(210, 210, 210, 0.05);
+   -moz-box-shadow: 0px 0px 5px 0px rgba(210, 210, 210, 0.05);
+   box-shadow: 0px 0px 5px 0px rgba(210, 210, 210, 0.05);
+   width: 49%;
+}
+
+.waittimes_holder .extras>div {
+   border-top: 1px solid rgba(255, 255, 255, .4);
+   margin-top: 10px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+
+   h3 {
+      margin-bottom: 5px;
+      font-weight: 400;
+   }
+
+   h4 {
+      font-weight: 200;
+      line-height: 130%;
+   }
+
+   div {
+      width: 50%;
+      padding-right: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      &:nth-of-type(2) {
+         padding-left: 10px;
+         border-left: 1px solid rgba(255, 255, 255, .4);
+      }
+   }
+}
+
+.waittimes_switch {
+   width: 100%;
+   margin: 0 auto;
+   border-radius: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: $dark-blue 1px solid;
+   overflow: hidden;
+   margin-top: 15px;
+   max-width: 800px;
+
+   &>div {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:not(:first-of-type) {
+         border-left: 1px solid $dark-blue;
+      }
+   }
+
+   div {
+      &.active {
+         background-color: $dark-blue;
+         color: white;
+      }
+   }
+}
+
+.attraction_content {
+   width: 100%;
+   position: relative;
+   color: #fff;
+   display: flex;
+   justify-content: space-between;
+   height: 100%;
+
+   h2 {
+      font-size: 16px;
+      font-weight: 700;
+   }
+
+   h3 {
+      font-size: 13px;
+      margin-top: 10px;
+      font-weight: 200;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div i {
+         margin: 0 10px;
+      }
+   }
+
+   h2,
+   h3 {
+      font-family: $font;
+      position: relative;
+      z-index: 1;
+   }
+}
+
+.attraction_content .info {
+   color: white;
+   z-index: 1;
+   position: relative;
+   margin-top: 10px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-wrap: wrap;
+
+   div {
+      font-size: 14px;
+      line-height: 150%;
+      width: 23%;
+      margin: 1%;
+      border-radius: 200px;
+      border: 1px solid white;
+      text-align: center;
+
+      &.passed {
+         opacity: .3;
+      }
+   }
+}
+
+.attraction_times {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   font-family: $font;
+   text-transform: uppercase;
+   text-align: center;
+   border-radius: 4px;
+   width: 70px;
+
+   h3 {
+      font-size: 25px;
+      width: 100%;
+      margin-top: 0;
+      font-weight: 700;
+      justify-content: center;
+      align-items: center;
+   }
+
+   p {
+      font-size: 14px;
+      width: 100%
+   }
+
+   i {
+      font-size: 25px;
+   }
+}
+
+.colorCode {
+   padding: 20px;
+   border-radius: 4px;
+   width: calc(100% - 75px);
+}
+
+.open {
+   background-color: #27ae60;
+}
+
+.openRedelijkDruk {
+   background-color: #e67e22;
+}
+
+.openDruk {
+   background-color: #f39c12;
+}
+
+.openHeelDruk {
+   background-color: #d35400;
+}
+
+.openSuperDruk {
+   background-color: #c03b2b;
+}
+
+.CLOSED {
+   background-color: #95a5a6;
+}
+
+.DOWN {
+   background-color: #e74c3c;
+}
+
+.SHOW {
+   background-color: #89ACD0;
+}
+
+.park_switch {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: #ffffff;
+   z-index: 100;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top: #c6c6c6 2px solid;
+
+   div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+      width: 50%;
+
+      i {
+         color: #9f9f9f;
+         font-size: 16px;
+         margin-bottom: 5px;
+      }
+
+      h2 {
+         font-size: 14px;
+         font-weight: 200;
+         color: #9f9f9f;
+      }
+
+      &.active {
+
+         i,
+         h2 {
+            color: $dark-blue;
+         }
+      }
+   }
+}
+
+.openingtimes {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+   h3 {
+      font-size: 16px;
+      font-weight: 700;
+      width: 100%;
+   }
+
+   &>article {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      padding: 25px;
+      margin-top: 20px;
+      border-radius: 10px;
+      width: 49%;
+
+      div {
+         width: 49%;
+         display: flex;
+         justify-content: center;
+         align-items: flex-start;
+         flex-direction: column;
+         margin-top: 15px;
+
+         &:first-of-type {
+            padding-right: 10px;
+         }
+
+         &:nth-of-type(2n) {
+            border-left: 2px solid #f2f2f2;
+            padding-left: 10px;
+         }
+
+         h4 {
+            font-size: 14 px;
+
+            &:last-of-type {
+               font-weight: 200;
+               margin-top: 5px;
+            }
+         }
+      }
+   }
+}
+
+/* Einde Wait Times */
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+   .waittimes_holder article {
+      width: 100%;
+      margin: 5px 0;
+   }
+}
+
+@media only screen and (max-width: 550px) {
+   .openingtimes>article {
+      width: 100%;
+   }
+}
+
+/* Einde Wait Times */
+
