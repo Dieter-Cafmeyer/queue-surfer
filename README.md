@@ -4,6 +4,9 @@ Queue Surfer is a wait times app built in React.js. Wait times for your favorite
 
 Next time you visit one of the supported parks. Keep an eye on wait time updates so you get the most out of your day. You can also check to see which attractions are experiencing momentary service interruptions or closures. Show schedules and a list of all restaurants are also available foor each supported themepark.
 
+Note: this webapp is built for smartphone use. A live version off the webapp can be found here:
+https://phl.tpattractions.com/
+
 ### Installation
 You can install using npm:
 
