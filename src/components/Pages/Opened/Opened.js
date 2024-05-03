@@ -10,6 +10,8 @@ const Opened = ({ onShowMenu }) => {
    const [timeslots, setTimeSlots] = useState([]);
 
    useEffect(() => {
+      window.scrollTo(0, 0);
+      
       const getWaitTimes = async () => {
          const data = await getOpeningTimes();
          setParkName(data.name);

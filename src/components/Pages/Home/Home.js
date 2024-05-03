@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
    const [resorts, setResorts] = useState({});
    const [cookies, setCookie] = useCookies(['parks']);
-
+   
    useEffect(() => {
       const getResorts = async () => {
          const data = await getAllResorts();
@@ -27,7 +27,6 @@ const Home = () => {
       var inoneyear = new Date();
       inoneyear.setDate(inoneyear.getDate()+365);
 
-
       if(typeof cookies.parks !== 'undefined') {
          if (cookies.parks.filter(e => e.id === id).length > 0) {
             parks = cookies.parks;
@@ -43,10 +42,23 @@ const Home = () => {
          }
       } else {
          let park = {
-            id: id
+            id: id,
+            name: name,
+            resortName: resortName
          }
          parks.push(park);
       }
+
+      parks.sort((a, b) => {
+         if (a.name < b.name) {
+           return -1;
+         }
+         if (a.name > b.name) {
+           return 1;
+         }
+         return 0;
+      });
+
       
       setCookie('parks', parks, {
          maxAge: inoneyear
@@ -55,7 +67,7 @@ const Home = () => {
 
    return (
       <>
-         <section className="page_holder">
+         <section className="page_holder wow bounceIn">
             <section className="resorts_holder">
                <h1 style={{ fontSize: "25px", marginBottom: '10px' }}>Select your favourite parks</h1>
                {resorts.length > 0 ? <Resorts resorts={resorts} onSelectPark={setSelectedPark} /> : 'No resorts to show'}

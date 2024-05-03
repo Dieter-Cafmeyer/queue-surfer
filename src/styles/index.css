@@ -106,6 +106,29 @@ main {
   min-height: 100px;
 }
 
+.searchHolder {
+  position: relative;
+}
+
+.searchHolder i {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000035;
+}
+
+.search {
+  width: 100%;
+  border: 1px solid #0606554a;
+  font-family: "effra", sans-serif;
+  padding: 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 10px !important;
+}
+
 /* Einde Algemeen */
 /* Navigatie */
 .navigation {

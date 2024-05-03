@@ -19,7 +19,7 @@ const Ride = ({ ride }) => {
       }
    }
    return (
-      <article onClick={() => setShowDetails(!showDetails)}>
+      <article onClick={() => setShowDetails(!showDetails)} data-name={ride.name} className='singleRide'>
          <div className="attraction_content">
             <div className={ride.statusClass + " colorCode"}>
                <h2>{ride.name}</h2>

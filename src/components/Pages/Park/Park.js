@@ -20,6 +20,8 @@ const Park = ({ onShowMenu }) => {
    let content;
 
    useEffect(() => {
+      window.scrollTo(0, 0);
+      
       const getWaitTimes = async () => {
          const data = await getLiveWaitTimesFromPark();
          setParkName(data.name);
