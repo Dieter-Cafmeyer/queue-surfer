@@ -113,7 +113,8 @@ main {
 .searchHolder i {
   position: absolute;
   right: 20px;
-  top: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
   cursor: pointer;
   color: #000035;
@@ -124,7 +125,7 @@ main {
   border: 1px solid #0606554a;
   font-family: "effra", sans-serif;
   padding: 20px;
-  font-size: 1rem;
+  font-size: 16px;
   border-radius: 10px !important;
 }
 
