@@ -158,7 +158,10 @@ const Park = ({ onShowMenu }) => {
    return (
       <section className="page_holder">
          <Navbar onShowMenu={onShowMenu} id={params.id} />
-         <img src={image} style={{ width: '100%', marginTop: '55px' }} alt='Park' />
+         <div className='parkImage'>
+            <img  src={image} alt='Park' />
+         </div>
+         
 
          <section className="waittimes_holder">
             <section className="titleholder">
