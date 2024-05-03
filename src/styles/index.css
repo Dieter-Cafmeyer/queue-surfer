@@ -125,7 +125,6 @@ main {
   font-family: "effra", sans-serif;
   padding: 20px;
   font-size: 1rem;
-  margin-bottom: 20px;
   border-radius: 10px !important;
 }
 
@@ -412,7 +411,8 @@ main {
   color: #000035;
 }
 
-.waittimes_holder > div > h2 {
+.waittimes_holder > div > h2,
+.attractions > h2 {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
