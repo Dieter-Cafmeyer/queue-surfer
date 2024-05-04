@@ -1,7 +1,7 @@
 const ShowTimes = ({showTime}) => {
    return (
       <div className={showTime.status}>
-         {showTime.time}
+         <i class="fa-light fa-clock"></i> &nbsp; {showTime.time}h
       </div>
    )
 }

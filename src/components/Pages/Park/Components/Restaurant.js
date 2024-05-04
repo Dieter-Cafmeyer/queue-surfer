@@ -1,4 +1,5 @@
 const Restaurant = ({ restaurant }) => {
+
    return (
       <article>
          <div className="attraction_content">

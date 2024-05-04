@@ -1,6 +1,7 @@
 import ShowTimes from "./ShowTimes"
 
 const Show = ({ show }) => {
+
    return (
       <article>
          <div className="attraction_content">

@@ -8,7 +8,9 @@ const RideStatus = ({ ride }) => {
    }
 
    return (
+      
       <div className="extras">
+         {typeof ride.queue !== 'undefined' && (typeof ride.queue.SINGLE_RIDER !== 'undefined' || typeof ride.queue.PAID_RETURN_TIME !== 'undefined') ?
          <div>
             {typeof ride.queue != 'undefined' && typeof ride.queue.SINGLE_RIDER != 'undefined' ? <div><h3>Single Rider</h3><h4>{ride.queue.SINGLE_RIDER.waitTime} min</h4></div> : ''}
             {typeof ride.queue != 'undefined' && typeof ride.queue.PAID_RETURN_TIME != 'undefined'
@@ -21,7 +23,9 @@ const RideStatus = ({ ride }) => {
                </div>
                : ''}
          </div>
+         : '' }
       </div >
+      
    )
 }
 

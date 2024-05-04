@@ -1,8 +1,7 @@
 import Ride from "./Ride"
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Rides = ({ rides, text }) => {
-
    return (
       <div>
          <div className="type attractions" data-name={rides.map((ride) => (ride.name))} >
