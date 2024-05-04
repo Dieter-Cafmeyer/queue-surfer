@@ -50,10 +50,10 @@ const Home = () => {
       }
 
       parks.sort((a, b) => {
-         if (a.name < b.name) {
+         if (a.resortName < b.resortName) {
            return -1;
          }
-         if (a.name > b.name) {
+         if (a.resortName > b.resortName) {
            return 1;
          }
          return 0;
